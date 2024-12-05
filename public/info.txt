@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Kankin
+font link: https://www.fontfabric.com/kankin-free-font/
+font author: Font Fabric
+font author site: http://www.fontfabric.com/
+Slogan Font: Aleo-Light.otf
+
+icon designer: KEN MURRAY
+icon designer link: /Bigroarcreative
+        
+{"bg":"#FB690A","icon":"#FFFDFB","font":"#FFFDFB","slogan":"#ffffff"}
+      
