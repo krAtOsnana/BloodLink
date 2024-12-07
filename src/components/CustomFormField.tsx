@@ -13,9 +13,12 @@ import { Textarea } from "./ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import PhoneInput from "react-phone-number-input";
 import { E164Number } from "libphonenumber-js/core";
-import 'react-phone-number-input/style.css'
+import "react-phone-number-input/style.css";
 
 import { Checkbox } from "./ui/checkbox";
 
@@ -74,6 +77,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </FormControl>
         </div>
       );
+
     case FormFieldType.TEXTAREA:
       return (
         <FormControl>
@@ -85,20 +89,22 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           />
         </FormControl>
       );
-      case FormFieldType.PHONE_INPUT:
-        return (
-          <FormControl>
-            <PhoneInput
-              defaultCountry="IN"
-              placeholder={props.placeholder}
-              international
-              withCountryCallingCode
-              value={field.value as E164Number | undefined}
-              onChange={field.onChange}
-              className="input-phone"
-            />
-          </FormControl>
-        );
+
+    case FormFieldType.PHONE_INPUT:
+      return (
+        <FormControl>
+          <PhoneInput
+            defaultCountry="IN"
+            placeholder={props.placeholder}
+            international
+            withCountryCallingCode
+            value={field.value as E164Number | undefined}
+            onChange={field.onChange}
+            className="input-phone"
+          />
+        </FormControl>
+      );
+
     case FormFieldType.CHECKBOX:
       return (
         <FormControl>
@@ -107,6 +113,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
               id={props.name}
               checked={field.value}
               onCheckedChange={field.onChange}
+              className="h-5 w-5 rounded-md border-gray-300  focus:ring-green-500 text-green-500"
             />
             <label htmlFor={props.name} className="checkbox-label">
               {props.label}
@@ -114,6 +121,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </div>
         </FormControl>
       );
+
     case FormFieldType.DATE_PICKER:
       return (
         <div className="flex rounded-md border border-dark-500 bg-dark-400">
@@ -124,18 +132,19 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
             alt="user"
             className="ml-2"
           />
-          {/* <FormControl>
-              <ReactDatePicker
-                showTimeSelect={props.showTimeSelect ?? false}
-                selected={field.value}
-                onChange={(date: Date) => field.onChange(date)}
-                timeInputLabel="Time:"
-                dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
-                wrapperClassName="date-picker"
-              />
-            </FormControl> */}
+          <FormControl>
+            <ReactDatePicker
+              showTimeSelect={props.showTimeSelect ?? false}
+              selected={field.value}
+              onChange={(date) => field.onChange(date)}
+              timeInputLabel="Time:"
+              dateFormat={props.dateFormat ?? "dd/MM/yyyy"}
+              wrapperClassName="date-picker"
+            />
+          </FormControl>
         </div>
       );
+
     case FormFieldType.SELECT:
       return (
         <FormControl>
@@ -151,8 +160,10 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </Select>
         </FormControl>
       );
+
     case FormFieldType.SKELETON:
       return props.renderSkeleton ? props.renderSkeleton(field) : null;
+
     default:
       return null;
   }

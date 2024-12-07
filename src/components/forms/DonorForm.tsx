@@ -10,6 +10,7 @@ import SubmitButton from "../SubmitButton";
 import { useState } from "react";
 import {DonorFormValidation} from "@/lib/validation"
 import { useRouter } from "next/navigation";
+import { createDonor } from "@/lib/actions/donor.actions";
 
 
 
@@ -29,21 +30,21 @@ const DonorForm = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit({name, email, phone}: z.infer<typeof DonorFormValidation>) {
+  const onSubmit = async ({name, email, phone}: z.infer<typeof DonorFormValidation>) => {
     setIsLoading(true);
 
      try {
-    //   const user = {
-    //     name: name,
-    //     email: email,
-    //     phone: phone,
-    //   };
+      const donor = {
+        name: name,
+        email: email,
+        phone: phone,
+      };
 
-    //   const newUser = await createUser(user);
+      const newDonor = await createDonor(donor);
 
-    //   if (newUser) {
-    //     router.push(`/donor/${newUser.$id}/register`);
-    //   }
+      if (newDonor) {
+        router.push(`/donor/${newDonor.$id}/register`);
+      }
     } catch (error) {
       console.log(error);
     }

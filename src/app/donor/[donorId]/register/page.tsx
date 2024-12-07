@@ -1,15 +1,28 @@
-import DonorForm from "@/components/forms/DonorForm";
+
 
 import Link from "next/link";
 import React from "react";
 import { Heart, Battery, Activity, Brain, Shield, Users } from "lucide-react";
 import Logo from "@/components/Logo";
+import DonorRegisterform from "@/components/forms/DonorRegisterform";
+import { getDonor } from "@/lib/actions/donor.actions";
 
-const page = () => {
+const page = async ( {params} : {
+  params: {
+    donorId: string;
+  }
+}) => {
+
+  const {donorId} = await  params ;
+  
+  const donor = await getDonor(donorId);
+  console.log(donor);
+  
   return (
-    <div className="grid md:grid-cols-2 h-screen max-h-screen overflow-hidden">
+    <div className="grid md:grid-cols-[3fr_2fr] h-screen max-h-screen ">
+      {/* Left Section */}
       <section className="container my-auto overflow-y-auto">
-        <div className="sub-container max-w-[496px]">
+        <div className="sub-container max-w-[650px] mx-auto">
           <Link href="/">
             <div className="flex items-center space-x-0">
               {/* <Droplets className="h-8 w-8 text-red-500" /> */}
@@ -18,11 +31,10 @@ const page = () => {
                 BloodLink
               </span>
             </div>
-            
           </Link>
-
-          <DonorForm />
-
+  
+          <DonorRegisterform donor={donor} />
+  
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
               © 2024 BloodLink
@@ -30,12 +42,14 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      <section className="hidden md:block overflow-y-auto ">
+  
+      {/* Right Section */}
+      <section className="hidden md:block overflow-y-auto">
         <DonationBenefits />
       </section>
     </div>
   );
+  
 };
 
 export default page;
@@ -81,7 +95,7 @@ const benefits = [
 
 function DonationBenefits() {
   return (
-    <div className="p-8">
+    <div className="p-8  ">
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
         {benefits.map((benefit, index) => (
           <div
