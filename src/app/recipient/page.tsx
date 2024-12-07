@@ -1,4 +1,6 @@
+import Logo from '@/components/Logo'
 import RecipientForm from '@/components/forms/RecipientForm'
+import { Droplets } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -9,13 +11,11 @@ const recipient = () => {
      <section className=" container my-auto">
         <div className="sub-container max-w-[496px]">
           <Link href="/">
-          <Image
-            src="/cover.png"
-            height={1000}
-            width={1000}
-            alt="logo"
-            className="mb-12 w-fit h-11  "
-          />
+          <div className="flex items-center ">
+            {/* <Droplets className="h-8 w-8 text-red-500" /> */}
+            <Logo h="8" w="8" />
+            <span className="text-xl font-bold text-gray-900 dark:text-white">BloodLink</span>
+          </div>
           </Link>
           
 

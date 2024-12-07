@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -30,7 +31,7 @@ const config = {
           600: "#152432",
         },
         red: {
-          500: "#F37877",
+          500: "#B0403E",
           600: "#3E1716",
           700: "#F24E43",
         },
@@ -67,15 +68,30 @@ const config = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "meteor-effect": "meteor 5s linear infinite",
       },
     },
+    
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+  require("tailwindcss-animate"),
+],
+
 } satisfies Config;
+
+
 
 export default config;

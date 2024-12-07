@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* ========================================== TAILWIND STYLES */
 @layer base {
   /* Remove scrollbar */
@@ -57,7 +63,7 @@
   }
 
   .container {
-    @apply relative flex-1 overflow-y-auto px-[5%];
+    @apply relative flex-1 overflow-y-hidden px-[5%];
   }
 
   .sub-container {
@@ -183,7 +189,7 @@
 
   /* =====  SHADCN OVERRIDES */
   .shad-primary-btn {
-    @apply bg-green-500 text-white !important;
+    @apply bg-red-500 text-white !important;
   }
 
   .shad-danger-btn {
@@ -348,3 +354,11 @@
 .PhoneInputInput::placeholder {
   color: #1a1d21;
 }
+
+
+
+
+
+
+/* globals.css */
+
