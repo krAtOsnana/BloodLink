@@ -1,5 +1,3 @@
-
-
 import Link from "next/link";
 import React from "react";
 import { Heart, Battery, Activity, Brain, Shield, Users } from "lucide-react";
@@ -7,17 +5,18 @@ import Logo from "@/components/Logo";
 import DonorRegisterform from "@/components/forms/DonorRegisterform";
 import { getDonor } from "@/lib/actions/donor.actions";
 
-const page = async ( {params} : {
+const page = async ({
+  params
+}: {
   params: {
     donorId: string;
-  }
+  };
 }) => {
+  const { donorId } = await params;
 
-  const {donorId} = await  params ;
-  
   const donor = await getDonor(donorId);
-  console.log(donor);
-  
+  //console.log(donor);
+
   return (
     <div className="grid md:grid-cols-[3fr_2fr] h-screen max-h-screen ">
       {/* Left Section */}
@@ -32,9 +31,9 @@ const page = async ( {params} : {
               </span>
             </div>
           </Link>
-  
+
           <DonorRegisterform donor={donor} />
-  
+
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
               © 2024 BloodLink
@@ -42,83 +41,144 @@ const page = async ( {params} : {
           </div>
         </div>
       </section>
-  
+
       {/* Right Section */}
-      <section className="hidden md:block overflow-y-auto">
-        <DonationBenefits />
+      <section className="hidden md:block">
+        <InformativeCards />
       </section>
     </div>
   );
-  
 };
 
 export default page;
 
-const benefits = [
+const informativeCards = [
   {
-    icon: Heart,
-    title: "Saves Lives",
-    description: "One donation can save up to 3 lives",
-    image: "/donationBenefits/saveLife3.jpg" // Replace with actual image path
+    type: "Preparation",
+    title: "Who Can Donate?",
+    description:
+      "Donors must be between 18 and 65 years old, weigh at least 50 kg, and be in good health.",
+    icon: Users
   },
   {
-    icon: Activity,
-    title: "Health Check",
-    description: "Free mini physical and blood tests",
-    image: "/donationBenefits/healthCheck.jpg" // Replace with actual image path
+    type: "Preparation",
+    title: "Hydrate Well",
+    description:
+      "Drink at least 500ml of water 1-2 hours before donating to stay hydrated.",
+    icon: Activity
   },
   {
-    icon: Battery,
-    title: "Reduces Health Risks",
-    description: "Lower risk of heart disease and cancer",
-    image: "/donationBenefits/healthRisk.jpg" // Replace with actual image path
+    type: "Preparation",
+    title: "Eat Iron-Rich Foods",
+    description:
+      "Consume iron-rich foods like spinach, beans, or fortified cereals before donation.",
+    icon: Battery
   },
   {
-    icon: Brain,
-    title: "Mental Well-being",
-    description: "Psychological benefits from helping others",
-    image: "/donationBenefits/mentalWellBeing.jpg" // Replace with actual image path
+    type: "Preparation",
+    title: "Avoid Alcohol",
+    description: "Avoid alcohol for 24 hours before your blood donation.",
+    icon: Shield
   },
   {
-    icon: Shield,
-    title: "Improved Health",
-    description: "Stimulates blood cell production",
-    image: "/donationBenefits/rbc.jpg" // Replace with actual image path
+    type: "Health Benefits",
+    title: "Lower Heart Disease Risk",
+    description:
+      "Regular donation reduces iron levels, which may lower heart disease risk.",
+    icon: Heart
   },
   {
-    icon: Users,
-    title: "Community Impact",
-    description: "Join a community of lifesavers",
-    image: "/donationBenefits/community2.jpg" // Replace with actual image path
+    type: "Health Benefits",
+    title: "Improved Blood Flow",
+    description:
+      "Donating blood improves circulation and reduces harmful iron deposits.",
+    icon: Brain
+  },
+  {
+    type: "Health Benefits",
+    title: "Free Health Screening",
+    description:
+      "Each donation includes a free mini health check (blood pressure, hemoglobin, etc.).",
+    icon: Activity
+  },
+  {
+    type: "Safety Guidelines",
+    title: "Donation Frequency",
+    description:
+      "Men can donate every 12 weeks, and women can donate every 16 weeks.",
+    icon: Users
+  },
+  {
+    type: "Safety Guidelines",
+    title: "Know Your Blood Type",
+    description:
+      "Understanding your blood type helps ensure compatibility for recipients.",
+    icon: Brain
+  },
+  {
+    type: "Post-Donation Care",
+    title: "Rest for 15 Minutes",
+    description:
+      "After donating, rest for 15 minutes and enjoy some refreshments to recover.",
+    icon: Shield
+  },
+  {
+    type: "Post-Donation Care",
+    title: "Avoid Heavy Exercise",
+    description:
+      "Do not engage in strenuous activities or heavy lifting for 24 hours post-donation.",
+    icon: Battery
+  },
+  {
+    type: "Post-Donation Care",
+    title: "Stay Hydrated",
+    description: "Drink extra fluids for 24-48 hours after donating blood.",
+    icon: Activity
+  },
+  {
+    type: "General Info",
+    title: "Blood Shelf Life",
+    description:
+      "Donated blood lasts for up to 42 days. Platelets expire in just 5 days!",
+    icon: Brain
+  },
+  {
+    type: "General Info",
+    title: "One Donation Saves Lives",
+    description:
+      "One blood donation can save up to three lives through plasma, platelets, and red cells.",
+    icon: Heart
   }
 ];
 
-function DonationBenefits() {
+function InformativeCards() {
   return (
-    <div className="p-8  ">
+    <div className="p-8">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+        Blood Donation Facts & Tips
+      </h2>
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
-        {benefits.map((benefit, index) => (
+        {informativeCards.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-start space-y-4 p-6 bg-white dark:bg-dark-400 rounded-lg shadow-lg hover:bg-red-100 dark:hover:bg-red-600 transition duration-200 ease-in-out transform hover:-translate-y-1"
+            className={`flex items-start p-6 bg-white dark:bg-dark-400 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1 hover:scale-105 ${
+              item.type === "Preparation"
+                ? "border-l-4 border-blue-500"
+                : item.type === "Health Benefits"
+                ? "border-l-4 border-green-500"
+                : item.type === "Safety Guidelines"
+                ? "border-l-4 border-yellow-500"
+                : "border-l-4 border-red-500"
+            }`}
           >
-            <img
-              src={benefit.image}
-              alt={benefit.title}
-              height={1000}
-              width={1000}
-              className="object-cover w-full h-48 rounded-lg mb-4"
-            />
-            <div className="flex items-start space-x-4">
-              <benefit.icon className="w-8 h-8 text-red-500 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {benefit.description}
-                </p>
-              </div>
+            <item.icon className="w-10 h-10 text-red-500 mr-4 flex-shrink-0" />
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                {item.description}
+              </p>
             </div>
           </div>
         ))}
@@ -126,5 +186,3 @@ function DonationBenefits() {
     </div>
   );
 }
-
-

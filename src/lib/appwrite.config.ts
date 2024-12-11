@@ -1,3 +1,4 @@
+
 import * as sdk from "node-appwrite";
 
 export const {
@@ -10,6 +11,7 @@ export const {
   // APPOINTMENT_COLLECTION_ID,
   NEXT_PUBLIC_BUCKET_ID: BUCKET_ID
 } = process.env;
+
 
 const client = new sdk.Client();
 

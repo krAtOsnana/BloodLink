@@ -10,12 +10,17 @@ import {
   storage,
   users,
 } from "../appwrite.config";
+import {
+  DonorFormValidation,
+  DonorRegistrationFormValidation
+} from "@/lib/validation";
+import {z} from "zod"
 
 
 
 
 
-// CREATE APPWRITE USER
+// CREATE APPWRITE DONOR
 export const createDonor = async (donor: CreateDonorParams) => {
     try {
       // Create new donor -> https://appwrite.io/docs/references/1.5.x/server-nodejs/users#create
@@ -41,6 +46,7 @@ export const createDonor = async (donor: CreateDonorParams) => {
     }
   };
 
+// GETTING EXISTIONG DONOR
 export const getDonor = async (donorId: string) => {
   try {
     const donor = await users.get(donorId);
@@ -48,5 +54,23 @@ export const getDonor = async (donorId: string) => {
   } catch (error) {
     console.log(error);
     
+  }
+}
+
+// REGISTERING DONOR'S DATA 
+export const registerDonor = async ({...donorsData}: z.infer<typeof DonorRegistrationFormValidation>) => {
+  try{
+    // creating new patient document 
+    const newDonor = await databases.createDocument(
+      "674f5d9f001f3996afc3",
+      "674f5dce0029a53855a9",
+      ID.unique(),
+      {
+        ...donorsData,
+      }
+    );
+    return parseStringify(newDonor);
+  }catch(error){
+    console.error(error)
   }
 }

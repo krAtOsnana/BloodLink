@@ -6,14 +6,16 @@ declare type SearchParamProps = {
   };
   
   declare type Gender = "Male" | "Female" | "Other";
-  declare type BloodType = "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-"
+  declare type BloodType = "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
   declare type Status = "pending" | "scheduled" | "cancelled";
+  declare type DonorHistory = "First-Time" | "Regular";
   
   declare interface CreateDonorParams {
     name: string;
     email: string;
     phone: string;
   }
+  
   declare interface Donor extends CreateDonorParams {
     $id: string;
   }
@@ -25,14 +27,12 @@ declare type SearchParamProps = {
     address: string;
     postId: string;
     occupation: string;
-    allergies: string | undefined;
-    preExistingMedicalConditions: string | undefined;
+    allergies?: string;
+    preExistingMedicalConditins?: string;
     privacyConsent: boolean;
-    isRegularDonor: boolean;
+    donationHistory: DonorHistory;
     lastDonationDate: Date;
-    donationEligibility: boolean;
-    bloodType: BloodType ;
-
+    bloodType: BloodType;
   }
   
   declare type CreateAppointmentParams = {

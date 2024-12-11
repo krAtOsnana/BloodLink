@@ -1,82 +1,62 @@
 export const GenderOptions = ["Male", "Female", "Other"];
-
-export const PatientFormDefaultValues = {
-  firstName: "",
-  lastName: "",
+export const DonorOption = ["First-Time", "Regular"];
+export const DonorFormDefaultValues = {
+  name: "",
   email: "",
   phone: "",
-  birthDate: new Date(Date.now()),
+  birthDate: new Date(),
   gender: "Male" as Gender,
   address: "",
+  postId: "",
   occupation: "",
-  emergencyContactName: "",
-  emergencyContactNumber: "",
-  primaryPhysician: "",
-  insuranceProvider: "",
-  insurancePolicyNumber: "",
+  donationHistory: "First-Time" as DonorHistory,
+  bloodGroup: "" as BloodType,
+  lastDonationDate: new Date(),
   allergies: "",
-  currentMedication: "",
-  familyMedicalHistory: "",
-  pastMedicalHistory: "",
-  identificationType: "Birth Certificate",
-  identificationNumber: "",
-  identificationDocument: [],
-  treatmentConsent: false,
-  disclosureConsent: false,
-  privacyConsent: false,
-};
 
-export const IdentificationTypes = [
-  "Birth Certificate",
-  "Driver's License",
-  "Medical Insurance Card/Policy",
-  "Military ID Card",
-  "National Identity Card",
-  "Passport",
-  "Resident Alien Card (Green Card)",
-  "Social Security Card",
-  "State ID Card",
-  "Student ID Card",
-  "Voter ID Card",
-];
+  preExistingMedicalConditins: "",
+
+  disclosureConsent: false,
+  privacyConcent: false
+};
 
 export const BloodGroups = [
   {
     image: "/assets/images/a+.png",
-    name: "A+",
+    name: "A+"
   },
   {
     image: "/assets/images/a-.png",
-    name: "A-",
+    name: "A-"
   },
   {
     image: "/assets/images/b+.png",
-    name: "B+",
+    name: "B+"
   },
   {
     image: "/assets/images/b-.png",
-    name: "B-",
+    name: "B-"
   },
   {
     image: "/assets/images/ab+.png",
-    name: "AB+",
+    name: "AB+"
   },
   {
     image: "/assets/images/ab-.png",
-    name: "AB-",
+    name: "AB-"
   },
   {
     image: "/assets/images/o+.png",
-    name: "O+",
+    name: "O+"
   },
   {
     image: "/assets/images/o-.png",
-    name: "O-",
-  },
+    name: "O-"
+  }
 ];
 
 export const StatusIcon = {
   scheduled: "/assets/icons/check.svg",
   pending: "/assets/icons/pending.svg",
-  cancelled: "/assets/icons/cancelled.svg",
+  cancelled: "/assets/icons/cancelled.svg"
 };
