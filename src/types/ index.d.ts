@@ -30,6 +30,7 @@ declare type SearchParamProps = {
     allergies?: string;
     preExistingMedicalConditins?: string;
     privacyConsent: boolean;
+    disclosureConsent: boolean;
     donationHistory: DonorHistory;
     lastDonationDate: Date;
     bloodType: BloodType;

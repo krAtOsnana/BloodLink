@@ -1,6 +1,7 @@
 export const GenderOptions = ["Male", "Female", "Other"];
 export const DonorOption = ["First-Time", "Regular"];
 export const DonorFormDefaultValues = {
+  userId:"",
   name: "",
   email: "",
   phone: "",
@@ -13,11 +14,9 @@ export const DonorFormDefaultValues = {
   bloodGroup: "" as BloodType,
   lastDonationDate: new Date(),
   allergies: "",
-
   preExistingMedicalConditins: "",
-
   disclosureConsent: false,
-  privacyConcent: false
+  privacyConsent: false
 };
 
 export const BloodGroups = [
