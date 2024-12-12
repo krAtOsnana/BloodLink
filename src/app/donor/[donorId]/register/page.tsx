@@ -168,7 +168,7 @@ function InformativeCards() {
                 ? "border-l-4 border-green-500"
                 : item.type === "Safety Guidelines"
                 ? "border-l-4 border-yellow-500"
-                : "border-l-4 border-red-500"
+                : "border-l-4 border-dark-500"
             }`}
           >
             <item.icon className="w-10 h-10 text-red-500 mr-4 flex-shrink-0" />
