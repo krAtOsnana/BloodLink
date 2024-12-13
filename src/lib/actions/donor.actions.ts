@@ -74,3 +74,21 @@ export const registerDonor = async ({...donorsData}: z.infer<typeof DonorRegistr
     console.error(error)
   }
 }
+export const getDonorData = async (donorId: string) => {
+  try{
+    // creating new patient document 
+    const donor = await getDonor(donorId)
+    const email = donor.email
+    const donorData = await databases.listDocuments(
+      "674f5d9f001f3996afc3",
+      "674f5dce0029a53855a9",
+      [
+        Query.equal('email', email)
+      ]
+    );
+    return parseStringify(donorData.documents[0]);
+  }catch(error){
+    console.error(error)
+  }
+}
+
