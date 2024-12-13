@@ -42,7 +42,7 @@ const DonationHistory = () => {
         </p>
       </div>
 
-      <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+      <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
         <CardHeader>
           <CardTitle className="text-gray-900 dark:text-white">
             Past Donations

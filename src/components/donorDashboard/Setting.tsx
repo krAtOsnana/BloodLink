@@ -30,7 +30,7 @@ const Settings = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-6 ">
-        <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+        <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-gray-900 dark:text-white">
               <Bell className="h-5 w-5 text-red-700 dark:text-red-400" />
@@ -77,7 +77,7 @@ const Settings = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+        <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-gray-900 dark:text-white">
               <Shield className="h-5 w-5 text-red-700 dark:text-red-400" />

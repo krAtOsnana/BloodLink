@@ -10,7 +10,7 @@ interface DonorStats {
 }
 
 const StatsCard = ({ stat }: { stat: DonorStats }) => (
-  <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
       <CardTitle className="text-sm font-medium text-gray-900 dark:text-white">
         {stat.label}
@@ -18,7 +18,7 @@ const StatsCard = ({ stat }: { stat: DonorStats }) => (
       {stat.icon}
     </CardHeader>
     <CardContent>
-      <div className="text-2xl font-bold text-red-700 dark:text-white">
+      <div className="text-2xl font-bold text-red-700 dark:text-dark-700">
         {stat.value}
       </div>
     </CardContent>
@@ -26,7 +26,7 @@ const StatsCard = ({ stat }: { stat: DonorStats }) => (
 );
 
 const PersonalInfoCard = ({ donor }: { donor: DonorInfo }) => (
-  <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
     <CardHeader>
       <CardTitle className="text-gray-900 dark:text-white">
         Personal Information
@@ -47,7 +47,7 @@ const PersonalInfoCard = ({ donor }: { donor: DonorInfo }) => (
             <p className="text-sm font-medium text-gray-900 dark:text-white">
               {item.label}
             </p>
-            <p className="text-sm text-red-700 dark:text-red-400">
+            <p className="text-sm text-red-700 dark:text-dark-700">
               {item.value}
             </p>
           </div>
@@ -58,7 +58,7 @@ const PersonalInfoCard = ({ donor }: { donor: DonorInfo }) => (
 );
 
 const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
-  <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
     <CardHeader>
       <CardTitle className="text-gray-900 dark:text-white">
         Medical Information
@@ -86,7 +86,7 @@ const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
             <p className="text-sm font-medium text-gray-900 dark:text-white">
               {item.label}
             </p>
-            <p className="text-sm text-red-700 dark:text-red-400">
+            <p className="text-sm text-red-700 dark:text-dark-700">
               {item.value}
             </p>
           </div>
@@ -97,12 +97,12 @@ const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
 );
 
 const DonationProgressCard = ({ donor }: { donor: DonorInfo }) => (
-  <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
     <CardHeader>
       <CardTitle className="text-gray-900 dark:text-white">
         Donation Progress
       </CardTitle>
-      <CardDescription className="text-red-500 dark:text-red-400">
+      <CardDescription className="text-red-500 dark:text-dark-700">
         Your journey to becoming a regular donor
       </CardDescription>
     </CardHeader>

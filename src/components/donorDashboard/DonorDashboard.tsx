@@ -33,7 +33,7 @@ const DonorSidebar = ({
   currentView: View;
   onViewChange: (view: View) => void;
 }) => (
-  <Sidebar className="w-64 border-r border-dark-500 border-dark-500">
+  <Sidebar className="w-64 border-r border-dark-500 ">
     <SidebarHeader className="p-4 bg-red-500 dark:bg-red-700">
       <div className="flex items-center space-x-2">
         <Avatar>
@@ -52,9 +52,9 @@ const DonorSidebar = ({
     </SidebarHeader>
     <SidebarContent>
       <SidebarGroup>
-        <SidebarGroupLabel className="text-gray-900 dark:text-white">
+        {/* <SidebarGroupLabel className="text-gray-900 dark:text-white">
           Menu
-        </SidebarGroupLabel>
+        </SidebarGroupLabel> */}
         <SidebarGroupContent>
           <SidebarMenu>
             <SidebarMenuItem>
