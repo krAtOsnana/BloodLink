@@ -10,7 +10,11 @@ interface DonorStats {
 }
 
 const StatsCard = ({ stat }: { stat: DonorStats }) => (
+<<<<<<< HEAD
   <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+=======
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
+>>>>>>> d1c9bce (donor dashboard completed)
     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
       <CardTitle className="text-sm font-medium text-gray-900 dark:text-white">
         {stat.label}
@@ -18,7 +22,11 @@ const StatsCard = ({ stat }: { stat: DonorStats }) => (
       {stat.icon}
     </CardHeader>
     <CardContent>
+<<<<<<< HEAD
       <div className="text-2xl font-bold text-red-700 dark:text-white">
+=======
+      <div className="text-2xl font-bold text-red-700 dark:text-dark-600">
+>>>>>>> d1c9bce (donor dashboard completed)
         {stat.value}
       </div>
     </CardContent>
@@ -26,7 +34,11 @@ const StatsCard = ({ stat }: { stat: DonorStats }) => (
 );
 
 const PersonalInfoCard = ({ donor }: { donor: DonorInfo }) => (
+<<<<<<< HEAD
   <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+=======
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
+>>>>>>> d1c9bce (donor dashboard completed)
     <CardHeader>
       <CardTitle className="text-gray-900 dark:text-white">
         Personal Information
@@ -47,7 +59,11 @@ const PersonalInfoCard = ({ donor }: { donor: DonorInfo }) => (
             <p className="text-sm font-medium text-gray-900 dark:text-white">
               {item.label}
             </p>
+<<<<<<< HEAD
             <p className="text-sm text-red-700 dark:text-red-400">
+=======
+            <p className="text-sm text-red-700 dark:text-dark-600">
+>>>>>>> d1c9bce (donor dashboard completed)
               {item.value}
             </p>
           </div>
@@ -58,7 +74,11 @@ const PersonalInfoCard = ({ donor }: { donor: DonorInfo }) => (
 );
 
 const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
+<<<<<<< HEAD
   <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+=======
+  <Card className="bg-white dark:bg-dark-400 border-dark-500">
+>>>>>>> d1c9bce (donor dashboard completed)
     <CardHeader>
       <CardTitle className="text-gray-900 dark:text-white">
         Medical Information
@@ -78,7 +98,11 @@ const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
           {
             label: "Last Donation Date",
             value: donor.lastDonationDate
+<<<<<<< HEAD
               ? new Date(donor.lastDonationDate).toLocaleDateString()
+=======
+              ? new Date(donor.lastDonationDate).toLocaleDateString("en-GB")
+>>>>>>> d1c9bce (donor dashboard completed)
               : "No previous donations"
           }
         ].map((item, index) => (
@@ -86,7 +110,11 @@ const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
             <p className="text-sm font-medium text-gray-900 dark:text-white">
               {item.label}
             </p>
+<<<<<<< HEAD
             <p className="text-sm text-red-700 dark:text-red-400">
+=======
+            <p className="text-sm text-red-700 dark:text-dark-600">
+>>>>>>> d1c9bce (donor dashboard completed)
               {item.value}
             </p>
           </div>
@@ -97,12 +125,20 @@ const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
 );
 
 const DonationProgressCard = ({ donor }: { donor: DonorInfo }) => (
+<<<<<<< HEAD
   <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+=======
+  <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
+>>>>>>> d1c9bce (donor dashboard completed)
     <CardHeader>
       <CardTitle className="text-gray-900 dark:text-white">
         Donation Progress
       </CardTitle>
+<<<<<<< HEAD
       <CardDescription className="text-red-500 dark:text-red-400">
+=======
+      <CardDescription className="text-red-500 dark:text-dark-600">
+>>>>>>> d1c9bce (donor dashboard completed)
         Your journey to becoming a regular donor
       </CardDescription>
     </CardHeader>
@@ -140,7 +176,11 @@ const DashboardHome = ({ donor }: { donor: DonorInfo }) => {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+<<<<<<< HEAD
           Donor Dashboard
+=======
+          Donor Dashboard* 
+>>>>>>> d1c9bce (donor dashboard completed)
         </h1>
         <p className="text-red-700 dark:text-red-400">
           Welcome back, {donor.name}. Here's your donation overview.

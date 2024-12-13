@@ -35,14 +35,22 @@ const DonationHistory = () => {
     <div className="space-y-8 ">
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+<<<<<<< HEAD
           Donation History
+=======
+          Donation History*
+>>>>>>> d1c9bce (donor dashboard completed)
         </h1>
         <p className="text-red-700 dark:text-red-400">
           View your past blood donations and upcoming appointments
         </p>
       </div>
 
+<<<<<<< HEAD
       <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
+=======
+      <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
+>>>>>>> d1c9bce (donor dashboard completed)
         <CardHeader>
           <CardTitle className="text-gray-900 dark:text-white">
             Past Donations

@@ -33,11 +33,16 @@ const DonorSidebar = ({
   currentView: View;
   onViewChange: (view: View) => void;
 }) => (
+<<<<<<< HEAD
   <Sidebar className="w-64 border-r border-dark-500 border-dark-500">
+=======
+  <Sidebar className="w-64 border-r border-dark-500 ">
+>>>>>>> d1c9bce (donor dashboard completed)
     <SidebarHeader className="p-4 bg-red-500 dark:bg-red-700">
       <div className="flex items-center space-x-2">
         <Avatar>
           <AvatarImage src="/placeholder-avatar.jpg" alt={donor.name} />
+<<<<<<< HEAD
           <AvatarFallback className="bg-red-200 dark:bg-red-800 text-white">
             <Logo h={"40"} w={"40"} />
           </AvatarFallback>
@@ -45,6 +50,15 @@ const DonorSidebar = ({
         <div>
           <p className="font-medium text-white">{donor.name}</p>
           <p className="text-sm text-red-100 dark:text-red-200">
+=======
+          <AvatarFallback className="bg-red-200 dark:bg-dark-500 text-white">
+            <Logo h={"40"} w={"40"} />
+          </AvatarFallback>
+        </Avatar>
+        <div className="text-dark-400">
+          <p className="font-semibold ">{donor.name}</p>
+          <p className="text-sm  ">
+>>>>>>> d1c9bce (donor dashboard completed)
             {donor.bloodType} Donor
           </p>
         </div>
@@ -52,9 +66,15 @@ const DonorSidebar = ({
     </SidebarHeader>
     <SidebarContent>
       <SidebarGroup>
+<<<<<<< HEAD
         <SidebarGroupLabel className="text-gray-900 dark:text-white">
           Menu
         </SidebarGroupLabel>
+=======
+        {/* <SidebarGroupLabel className="text-gray-900 dark:text-white">
+          Menu
+        </SidebarGroupLabel> */}
+>>>>>>> d1c9bce (donor dashboard completed)
         <SidebarGroupContent>
           <SidebarMenu>
             <SidebarMenuItem>

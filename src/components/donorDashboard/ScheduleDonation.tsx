@@ -36,7 +36,11 @@ const ScheduleDonation = () => {
     <div className="space-y-8 max-w-fit ">
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+<<<<<<< HEAD
           Schedule Donation
+=======
+          Schedule Donation*
+>>>>>>> d1c9bce (donor dashboard completed)
         </h1>
         <p className="text-red-700 dark:text-red-400">
           Choose your preferred date, location, and time for your next donation
