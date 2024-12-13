@@ -22,11 +22,7 @@ const Settings = () => {
     <div className="space-y-8 max-w-fit">
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-<<<<<<< HEAD
           Settings
-=======
-          Settings*
->>>>>>> d1c9bce (donor dashboard completed)
         </h1>
         <p className="text-red-700 dark:text-red-400">
           Manage your account preferences and notifications
@@ -34,11 +30,7 @@ const Settings = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-6 ">
-<<<<<<< HEAD
         <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
-=======
-        <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
->>>>>>> d1c9bce (donor dashboard completed)
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-gray-900 dark:text-white">
               <Bell className="h-5 w-5 text-red-700 dark:text-red-400" />
@@ -85,11 +77,7 @@ const Settings = () => {
           </CardContent>
         </Card>
 
-<<<<<<< HEAD
         <Card className="bg-white dark:bg-dark-400 border-dark-500 border-dark-500">
-=======
-        <Card className="bg-white dark:bg-dark-400 border-dark-500 ">
->>>>>>> d1c9bce (donor dashboard completed)
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-gray-900 dark:text-white">
               <Shield className="h-5 w-5 text-red-700 dark:text-red-400" />
