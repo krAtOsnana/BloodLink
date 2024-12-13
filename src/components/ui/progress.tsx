@@ -18,11 +18,11 @@ const Progress = React.forwardRef<
     {...props}
   >
     <ProgressPrimitive.Indicator
-<<<<<<< HEAD
+
       className="h-full w-full flex-1 bg-primary transition-all"
-=======
-      className="h-full w-full flex-1 bg-red-700 transition-all"
->>>>>>> d1c9bce (donor dashboard completed)
+
+
+
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />
   </ProgressPrimitive.Root>

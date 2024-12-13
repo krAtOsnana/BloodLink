@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* ========================================== TAILWIND STYLES */
 @layer base {
   /* Remove scrollbar */
@@ -29,7 +35,7 @@
 @layer utilities {
   /* ===== UTILITIES */
   .sidebar {
-    @apply remove-scrollbar w-full max-w-72 flex-col overflow-auto bg-black px-7 py-10;
+    @apply remove-scrollbar w-full max-w-72 flex-col overflow-auto bg-black-800 px-7 py-10;
   }
 
   .left-sidebar {
@@ -57,7 +63,7 @@
   }
 
   .container {
-    @apply relative flex-1 overflow-y-auto px-[5%];
+    @apply relative flex-1 overflow-y-hidden px-[5%];
   }
 
   .sub-container {
@@ -65,7 +71,7 @@
   }
 
   .side-img {
-    @apply hidden h-full object-cover md:block;
+    @apply hidden h-full  object-cover  md:block;
   }
 
   .copyright {
@@ -100,7 +106,7 @@
   }
 
   .checkbox-label {
-    @apply cursor-pointer text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
+    @apply cursor-pointer text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-5;
   }
 
   /* ==== File Upload */
@@ -183,7 +189,7 @@
 
   /* =====  SHADCN OVERRIDES */
   .shad-primary-btn {
-    @apply bg-green-500 text-white !important;
+    @apply bg-red-500 text-white !important;
   }
 
   .shad-danger-btn {
@@ -348,3 +354,11 @@
 .PhoneInputInput::placeholder {
   color: #1a1d21;
 }
+
+
+
+
+
+
+/* globals.css */
+

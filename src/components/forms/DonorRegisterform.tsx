@@ -20,7 +20,6 @@ import {
 } from "@/constants/inedx";
 import { SelectItem } from "../ui/select";
 import Image from "next/image";
-import { Donor, RegisterDonorParams } from "@/types/ index";
 
 const DonorRegisterform = ({ donor }: { donor: Donor }) => {
   const [isLoading, setIsLoading] = useState(false);

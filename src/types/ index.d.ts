@@ -36,22 +36,6 @@ declare type SearchParamProps = {
     bloodType: BloodType;
   }
   
-  export interface DonorInfo {
-    name: string;
-    email: string;
-    gender: string;
-    phone: string;
-    occupation: string;
-    address: string;
-    postId: string;
-    preExistingMedicalConditions: string;
-    allergies: string;
-    bloodType: string;
-    donationEligibility: string;
-    donationHistory: string;
-    lastDonationDate: string;
-  }
-
   declare type CreateAppointmentParams = {
     userId: string;
     patient: string;

@@ -22,7 +22,7 @@ export function Hero() {
               <Link href="/donor" className="px-8 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors duration-300 ease-in-out">
                 Become a Donor
               </Link>
-              <Link href="/recipient" className="px-8 py-3 border-2 border-dark-500 text-red-500 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors duration-300 ease-in-out">
+              <Link href="/recipient" className="px-8 py-3 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors duration-300 ease-in-out">
                 Request Blood
               </Link>
             </div>
