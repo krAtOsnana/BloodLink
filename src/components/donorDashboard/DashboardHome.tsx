@@ -78,7 +78,7 @@ const MedicalInfoCard = ({ donor }: { donor: DonorInfo }) => (
           {
             label: "Last Donation Date",
             value: donor.lastDonationDate
-              ? new Date(donor.lastDonationDate).toLocaleDateString()
+              ? new Date(donor.lastDonationDate).toLocaleDateString("en-GB")
               : "No previous donations"
           }
         ].map((item, index) => (

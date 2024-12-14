@@ -131,7 +131,7 @@ const DonorRegisterform = ({ donor }: { donor: Donor }) => {
         onSubmit={form.handleSubmit(onSubmit, onError)}
         className="space-y-8"
       >
-        <main>
+
           <section className=" space-y-4 flex-1">
             <h1 className="header">Welcome 👋</h1>
             <p className="text-red-500">Let us know more about yourself.</p>
@@ -437,7 +437,7 @@ const DonorRegisterform = ({ donor }: { donor: Donor }) => {
               to these terms.
             </p>
           </section>
-        </main>
+
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>
     </Form>

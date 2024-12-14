@@ -6,7 +6,7 @@ import Logo from './Logo';
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-24 bg-gradient-to-br from-red-50 to-white dark:from-dark-500 dark:to-dark-400">
+    <section className="pt-32  pb-24 bg-gradient-to-br from-red-50 to-white dark:from-dark-500 dark:to-dark-400">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <Meteors/>
