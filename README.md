@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BloodLink
 
-## Getting Started
+**BloodLink** is a modern blood donation platform designed to connect donors and recipients seamlessly. Built as a JSM Hackathon project, the app focuses on enhancing development skills while addressing real-world needs in the blood donation process. The platform enables users to register, search for nearby donors or recipients, and manage notifications efficiently.
 
-First, run the development server:
+## Why BloodLink?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Blood donation is a critical aspect of healthcare, yet finding donors or recipients in urgent situations often becomes challenging. BloodLink bridges this gap by providing a platform where donors and recipients can connect efficiently and effectively. By simplifying the process of finding nearby donors or responding to urgent requests, the app aims to save lives and reduce the logistical challenges associated with blood donation.
+## Addressing Real-Life Challenges
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In situations where immediate access to blood is crucial—such as during surgeries like Coronary Artery Bypass Grafting (CABG), cancer, kidney transplant, —the need for a system like BloodLink becomes evident.
+While the hospital's blood bank had the necessary blood, they required it to be replenished with the same amount of donated blood before releasing it. Patients often face the daunting task of finding multiple donors on short notice, which can lead to delays in critical medical procedures. By leveraging technology, BloodLink aims to alleviate these pressures and ensure timely access to necessary blood supplies.
+ 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+### 1. **Donor Registration**
+- **User-Friendly Form**: Allows donors to sign up by providing key details like name, age, blood group, and contact information.
+- **Location Integration**: Includes a "Use My Current Location" feature to autofill the address field for convenience.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. **Donor Dashboard**
+The dashboard is divided into several sections:
+- **Dashboard**: Displays an overview of the donor's information and activity.
+- **Blood Request**: Lists recipient requests with key attributes like the "Date of Need" and whether the request is for a family member or friend.
+- **Donation History**: Displays a record of past donations (currently a pseudo-component).
+- **Settings**: Allows donors to manage their preferences (pseudo-component).
+- **Schedule Donation**: Enables donors to plan upcoming donations (pseudo-component).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. **Recipient Listing**
+- Displays recipient requests with filters for attributes like:
+  - Date of Need
+  - Whether the request is personal or for a family member/friend
+- Enables donors to notify recipients via WhatsApp.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. **Notification System**
+- **Twilio Integration**: Donors can send WhatsApp notifications to recipients directly from the app (development environment only).
+- **Toast Notifications**: Confirms successful notifications to the donor.
 
-## Deploy on Vercel
+<!-- ### 5. **Location-Based Search**
+- **Nearby Users**: Enables registered users to find nearby donors or recipients based on location.
+- **Postal Code Sorting/Searching**: Planned feature for enhanced search capabilities. -->
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Frontend**: React.js, Next.js
+- **Backend**: Node.js, Express
+- **Database**: Appwrite
+- **Notifications**: Twilio (WhatsApp integration)
+
+---
+
+## Project Goals
+
+- **Skill Development**: Enhance development skills with a focus on modern technologies.
+- **Portfolio Showcase**: Build a practical, real-world application for the portfolio.
+
+---
+
+## Future Plans
+
+1. Migrate the database from Appwrite to PostgreSQL for better scalability and relational data handling.
+2. Implement full functionality for the **Donation History**, **Schedule Donation**, and **Settings** components.
+3. Add a fully functional postal code-based search and sorting system.
+4. Optimize and deploy the app to production.
+
+---
+
+## How to Run the Project
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/bloodlink.git
+   cd bloodlink
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Environment Variables**:
+   - Create a `.env` file in the root directory.
+   - Add the following environment variables:
+     ```env
+     TWILIO_SID=your_twilio_sid
+     TWILIO_AUTH_TOKEN=your_twilio_auth_token
+     TWILIO_PHONE_NUMBER=your_twilio_phone_number
+     NEXT_PUBLIC_MAP_API_KEY=your_map_api_key
+     ```
+
+4. **Run the Application**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Access the App**:
+   Open `http://localhost:3000` in your browser.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or find issues, feel free to create an issue or submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Acknowledgments
+
+- Twilio for providing the WhatsApp API integration.
+- All developers and contributors who inspired the creation of this project.
