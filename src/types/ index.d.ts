@@ -52,20 +52,32 @@ declare type SearchParamProps = {
     lastDonationDate: string;
   }
 
-  declare type CreateAppointmentParams = {
-    userId: string;
-    patient: string;
-    primaryPhysician: string;
-    reason: string;
-    schedule: Date;
-    status: Status;
-    note: string | undefined;
-  };
-  
-  declare type UpdateAppointmentParams = {
-    appointmentId: string;
-    userId: string;
-    timeZone: string;
-    appointment: Appointment;
-    type: string;
-  };
+  declare interface CreateRecipientParams {
+    name: string;
+    email: string;
+    phone: string;
+  }
+  declare interface Recipient extends CreateRecipientParams {
+    $id: string;
+  }
+  declare interface RegisterRecipientParams extends CreateRecipientParams{
+    userId: string ;
+    address: string;
+    postId: string;
+    privacyConsent: boolean;
+    disclosureConsent: boolean;
+    transfusionRequestDocument: FormData | undefined;
+    unitRequired: string;
+  }
+  export interface RecipientInfo{
+    name: string;
+    email: string;
+    phone: string;
+    address: string;
+    postId: string;
+    transfusionRequestDocumentUrl:string;
+    transfusionRequestDocumentId: string;
+    unitRequired: string;
+    $createdAt: string;
+    $createdAt: string;
+  }

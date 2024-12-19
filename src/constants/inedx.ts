@@ -1,7 +1,9 @@
+import { BloodType, DonorHistory, Gender } from "@/types/ index";
+
 export const GenderOptions = ["Male", "Female", "Other"];
 export const DonorOption = ["First-Time", "Regular"];
 export const DonorFormDefaultValues = {
-  userId:"",
+  userId: "",
   name: "",
   email: "",
   phone: "",
@@ -17,6 +19,21 @@ export const DonorFormDefaultValues = {
   preExistingMedicalConditins: "",
   disclosureConsent: false,
   privacyConsent: false
+};
+export const RecipientFormDefaultValues = {
+  userId: "",
+  name: "",
+  email: "",
+  phone: "",
+
+  address: "",
+  postId: "",
+
+  disclosureConsent: false,
+  privacyConsent: false,
+
+  transfusionRequestDocument: [] ,
+  unitRequired: "1",
 };
 
 export const BloodGroups = [
@@ -53,9 +70,3 @@ export const BloodGroups = [
     name: "O-"
   }
 ];
-
-export const StatusIcon = {
-  scheduled: "/assets/icons/check.svg",
-  pending: "/assets/icons/pending.svg",
-  cancelled: "/assets/icons/cancelled.svg"
-};

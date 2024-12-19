@@ -3,13 +3,13 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormField, { FormFieldType } from "../CustomFormField";
 import SubmitButton from "../SubmitButton";
 import { useState } from "react";
-import {DonorFormValidation} from "@/lib/validation"
+import { RecipientFormValidation} from "@/lib/validation"
 import { useRouter } from "next/navigation";
+import { createRecipient } from "@/lib/actions/recipient.actions";
 
 
 const RecipientForm = () => {
@@ -18,8 +18,8 @@ const RecipientForm = () => {
   const router = useRouter()
 
   // 1. Define your form.
-  const form = useForm<z.infer<typeof DonorFormValidation>>({
-    resolver: zodResolver(DonorFormValidation),
+  const form = useForm<z.infer<typeof RecipientFormValidation>>({
+    resolver: zodResolver(RecipientFormValidation),
     defaultValues: {
       name: "",
       email:"",
@@ -28,21 +28,21 @@ const RecipientForm = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit({name, email, phone}: z.infer<typeof DonorFormValidation>) {
+  async function onSubmit({name, email, phone}: z.infer<typeof RecipientFormValidation>) {
     setIsLoading(true);
 
      try {
-    //   const user = {
-    //     name: name,
-    //     email: email,
-    //     phone: phone,
-    //   };
+      const user = {
+        name: name,
+        email: email,
+        phone: phone,
+      };
 
-    //   const newUser = await createUser(user);
+      const newRecipient = await createRecipient(user);
 
-    //   if (newUser) {
-    //     router.push(`/donor/${newUser.$id}/register`);
-    //   }
+      if (newRecipient) {
+        router.push(`/recipient/${newRecipient.$id}/register`);
+      }
     } catch (error) {
       console.log(error);
     }
