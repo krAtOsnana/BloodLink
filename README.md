@@ -27,11 +27,17 @@ The dashboard is divided into several sections:
 - **Settings**: Allows donors to manage their preferences (pseudo-component).
 - **Schedule Donation**: Enables donors to plan upcoming donations (pseudo-component).
 
-### 3. **Recipient Listing**
-- Displays recipient requests with filters for attributes like:
-  - Date of Need
-  - Whether the request is personal or for a family member/friend
-- Enables donors to notify recipients via WhatsApp.
+### 3. **Recipient registration**
+- **User-Friendly Form**: Allows recipient to sign up by providing key details like name, email, phoneNumber, address, postalcode, dropBox to upload transfusion request document
+- **Location Integration**: Includes a "Use My Current Location" feature to autofill the address field for convenience.
+- 
+### 4. **Recipient Dashboard**
+The dashboard is divided into several sections:
+- **Dashboard**: Displays an overview of the recipient's information and activity.
+- **Donor's list**: Lists donor's requests with key attributes like the "Blood group" and "notify button" .
+- **Request status**: Displays a record of past request status (currently a pseudo-component).
+- **Settings**: Allows donors to manage their preferences (pseudo-component).
+
 
 ### 4. **Notification System**
 - **Twilio Integration**: Donors can send WhatsApp notifications to recipients directly from the app (development environment only).
@@ -45,17 +51,18 @@ The dashboard is divided into several sections:
 
 ## Tech Stack
 
-- **Frontend**: React.js, Next.js
-- **Backend**: Node.js, Express
-- **Database**: Appwrite
-- **Notifications**: Twilio (WhatsApp integration)
+- **Frontend**: Next.js, shadcn library.
+- **Backend**: Next.js.
+- **Database**: Appwrite.
+- **Notifications**: Twilio (WhatsApp integration).
 
 ---
 
 ## Project Goals
 
+- **Hackathon Showcase**: Build a practical, real-world application for the JSM Hackathon.
 - **Skill Development**: Enhance development skills with a focus on modern technologies.
-- **Portfolio Showcase**: Build a practical, real-world application for the portfolio.
+  
 
 ---
 
