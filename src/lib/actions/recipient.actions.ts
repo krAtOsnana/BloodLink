@@ -90,8 +90,8 @@ export const getRecipient = async (recipientId: string) => {
       const recipietn = await getRecipient(recipientId)
       const email = recipietn.email
       const recipientData = await databases.listDocuments(
-        "674f5d9f001f3996afc3",
-        "674f5e7400179a6f1d23",
+        DATABASE_ID!,
+        RECIPIENT_COLLECTION_ID!,
         [
           Query.equal('email', email)
         ]
@@ -105,7 +105,7 @@ export const getRecipient = async (recipientId: string) => {
   export const getDocument = async  (documentId:string) => {
       try {
         const buffer  = await storage.getFilePreview( 
-          "67501054001111ba516c",
+          BUCKET_ID!,
           documentId)
           console.log(buffer);
           const blob = new Blob([buffer], { type: 'image/jpeg' });
