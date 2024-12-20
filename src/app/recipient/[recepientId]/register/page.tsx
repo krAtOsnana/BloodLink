@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { Heart, Activity, Brain, Clock, Users, Zap, Repeat, Ambulance, Scissors, Target, Search, RefreshCw } from 'lucide-react';
 import Logo from "@/components/Logo";
-import DonorRegisterform from "@/components/forms/DonorRegisterform";
 import { getRecipient } from "@/lib/actions/recipient.actions";
 import RecipientRegisterForm from "@/components/forms/RecipientRegisterForm";
 

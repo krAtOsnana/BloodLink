@@ -31,9 +31,9 @@ export function Header() {
             <Link href="#how-it-works"  className="hover:scale-105 hover:font-semibold transition-transform text-gray-600 hover:text-red-500 dark:text-gray-300">How It Works</Link>
             <Link href="/donor" className="hover:scale-105 hover:font-semibold transition-transform text-gray-600 hover:text-red-500 dark:text-gray-300">Donate Blood</Link>
             <Link href="/recipient" className="hover:scale-105 hover:font-semibold transition-transform text-gray-600 hover:text-red-500 dark:text-gray-300">Request Blood</Link>
-            <button className="px-4 py-2 text-red-500 border border-dark-500 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20">
+            {/* <button className="px-4 py-2 text-red-500 border border-dark-500 rounded-full hover:bg-red-50 dark:hover:bg-red-900/20">
               Login
-            </button>
+            </button> */}
             <ModeToggle />
           </div>
         </div>

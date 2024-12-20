@@ -1,7 +1,7 @@
 import { DonorInfo } from "@/types/ index";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { AlertCircle, Calendar, Droplet, FileText } from "lucide-react";
+import { AlertCircle, Droplet, FileText } from "lucide-react";
 
 interface DonorStats {
   label: string;

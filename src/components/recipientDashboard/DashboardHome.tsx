@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Phone, Mail, Calendar, Droplet, FileText, User } from "lucide-react";
+import { MapPin, Phone, Mail, Droplet, FileText, User } from "lucide-react";
 import { RecipientInfo } from "@/types/ index";
 import { getDocument } from "@/lib/actions/recipient.actions";
 import { useEffect, useState } from "react";

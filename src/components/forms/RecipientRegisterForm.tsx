@@ -12,14 +12,10 @@ import { useRouter } from "next/navigation";
 import { Label } from "../ui/label";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import {
-  BloodGroups,
-  GenderOptions,
   RecipientFormDefaultValues,
-  DonorOption
 } from "@/constants/inedx";
-import { SelectItem } from "../ui/select";
-import Image from "next/image";
-import {  Recipient, RegisterDonorParams, RegisterRecipientParams } from "@/types/ index";
+
+import {  Recipient } from "@/types/ index";
 import { registerRecipient } from "@/lib/actions/recipient.actions";
 import { FileUploader } from "../FileUploader";
 

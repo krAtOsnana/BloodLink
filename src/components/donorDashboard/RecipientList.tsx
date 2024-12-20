@@ -8,7 +8,6 @@ import { useToast } from "@/hooks/use-toast"
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
