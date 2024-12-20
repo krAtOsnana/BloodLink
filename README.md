@@ -28,7 +28,10 @@ The dashboard is divided into several sections:
 - **Schedule Donation**: Enables donors to plan upcoming donations (pseudo-component).
 
 
-https://github.com/user-attachments/assets/9c733d88-3fb0-41fa-adef-1d32a6dcdca2
+
+https://github.com/user-attachments/assets/d3f131f5-5803-4915-a6d6-134da0369c27
+
+
 
 
 ### 3. **Recipient registration**
@@ -42,7 +45,11 @@ The dashboard is divided into several sections:
 - **Request status**: Displays a record of past request status (currently a pseudo-component).
 - **Settings**: Allows donors to manage their preferences (pseudo-component).
 
-https://github.com/user-attachments/assets/c6ddc450-f93d-4d06-8529-665735f6d593
+
+https://github.com/user-attachments/assets/36c214c9-3c5c-4db6-ae81-6e026b96e512
+
+
+
 
 ### 4. **Notification System**
 - **Twilio Integration**: Donors can send WhatsApp notifications to recipients directly from the app (development environment only).
