@@ -27,6 +27,10 @@ The dashboard is divided into several sections:
 - **Settings**: Allows donors to manage their preferences (pseudo-component).
 - **Schedule Donation**: Enables donors to plan upcoming donations (pseudo-component).
 
+
+https://github.com/user-attachments/assets/9c733d88-3fb0-41fa-adef-1d32a6dcdca2
+
+
 ### 3. **Recipient registration**
 - **User-Friendly Form**: Allows recipient to sign up by providing key details like name, email, phoneNumber, address, postalcode, dropBox to upload transfusion request document
 - **Location Integration**: Includes a "Use My Current Location" feature to autofill the address field for convenience.
@@ -38,6 +42,7 @@ The dashboard is divided into several sections:
 - **Request status**: Displays a record of past request status (currently a pseudo-component).
 - **Settings**: Allows donors to manage their preferences (pseudo-component).
 
+https://github.com/user-attachments/assets/c6ddc450-f93d-4d06-8529-665735f6d593
 
 ### 4. **Notification System**
 - **Twilio Integration**: Donors can send WhatsApp notifications to recipients directly from the app (development environment only).
@@ -50,6 +55,9 @@ The dashboard is divided into several sections:
 ---
 
 ## Tech Stack
+
+
+
 
 - **Frontend**: Next.js, shadcn library.
 - **Backend**: Next.js.
